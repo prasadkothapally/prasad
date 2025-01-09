@@ -1,0 +1,29 @@
+site_name: AllFunds Wiki
+site_url: http://localhost:8080
+repo_url: https://gitlabnew.techwave.net/fintrust/wiki.git
+edit_uri: https://gitlabnew.techwave.net/fintrust/wiki/-/edit/main/docs/
+
+#theme: readthedocs
+theme:
+  name: material
+markdown_extensions:
+  - toc:
+      permalink: "#"
+plugins:
+ - kroki:
+    ServerURL: https://kroki.io
+    FencePrefix: kroki-
+    EnableBlockDiag: True
+    Enablebpmn: True
+    EnableMermaid: False
+    EnableDiagramsnet: True
+    FileTypes:
+      - png
+      - svg
+ - plantuml:
+    puml_url: https://www.plantuml.com/plantuml/
+    num_workers: 8
+ - mermaid2:
+ - print-site:
+     
+
