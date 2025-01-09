@@ -1,9 +1,0 @@
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-force = true
-headers = { 
-  Authorization = "Basic a3BkOm15cGFzc3dvcmQ="
-}
-

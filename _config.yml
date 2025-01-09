@@ -1,5 +1,0 @@
-- name: Add Jekyll Auth Configuration
-  run: |
-    echo "jekyll_auth:" >> _config.yml
-    echo "  restrict_site: true" >> _config.yml
-
