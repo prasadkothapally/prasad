@@ -27,7 +27,5 @@ plugins:
  - mermaid2:
  - print-site:
 
-jekyll_auth:
-  restrict_site: true
  
 
