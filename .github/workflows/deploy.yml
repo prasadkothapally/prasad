@@ -1,4 +1,4 @@
-name: Deploy MkDocs
+name: Deploy MkDocs with Jekyll Authentication
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,13 +18,30 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Install dependencies
+      - name: Install MkDocs and Dependencies
         run: |
-          #pip install mkdocs mkdocs-material
           pip install mkdocs mkdocs_puml mkdocs-kroki-plugin fontawesome-markdown mkdocs-material mkdocs-mermaid2-plugin mkdocs-swagger-ui mkdocs-print-site-plugin
-      - name: Deploy to GitHub Pages
+
+      - name: Set up Ruby for Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+
+      - name: Install Jekyll Dependencies
+        run: |
+          gem install bundler
+          echo 'gem "jekyll-auth"' >> Gemfile
+          bundle install
+
+      - name: Add Jekyll Auth Configuration
+        run: |
+          echo "jekyll_auth:" >> _config.yml
+          echo "  restrict_site: true" >> _config.yml
+
+      - name: Deploy MkDocs with Jekyll Authentication
         run: mkdocs gh-deploy --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+          GITHUB_CLIENT_ID: ${{ secrets.GITHUB_CLIENT_ID }}
+          GITHUB_CLIENT_SECRET: ${{ secrets.GITHUB_CLIENT_SECRET }}
 

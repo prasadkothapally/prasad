@@ -27,7 +27,7 @@ plugins:
  - mermaid2:
  - print-site:
 
-extra_javascript:
-  - js/auth.js
-     
+jekyll_auth:
+  restrict_site: true
+ 
 
