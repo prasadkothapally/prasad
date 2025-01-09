@@ -1,7 +1,7 @@
 site_name: AllFunds Wiki
-site_url: https://prasadkothapally.github.io/prasad
-repo_url: https://github.com/prasadkothapally/prasad.git
-edit_uri: https://github.com/prasadkothapally/prasad/-/edit/main/docs/
+site_url: http://localhost:8080
+repo_url: https://gitlabnew.techwave.net/fintrust/wiki.git
+edit_uri: https://gitlabnew.techwave.net/fintrust/wiki/-/edit/main/docs/
 
 #theme: readthedocs
 theme:
@@ -20,12 +20,10 @@ plugins:
     FileTypes:
       - png
       - svg
-
  - plantuml:
     puml_url: https://www.plantuml.com/plantuml/
     num_workers: 8
  - mermaid2:
  - print-site:
-
- 
+     
 
