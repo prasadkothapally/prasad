@@ -20,6 +20,9 @@ plugins:
     FileTypes:
       - png
       - svg
+extra:
+  username: "admin"
+  password: "secret"
  - plantuml:
     puml_url: https://www.plantuml.com/plantuml/
     num_workers: 8
