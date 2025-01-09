@@ -1,13 +1,10 @@
-window.onload = function() {
-  const correctUsername = "{{ extra.username }}";  // From mkdocs.yml
-  const correctPassword = "{{ extra.password }}";  // From mkdocs.yml
-  
-  var username = prompt("Enter username:");
-  var password = prompt("Enter password:");
+const username = "admin";
+const password = "secret";
 
-  if (username !== correctUsername || password !== correctPassword) {
-    document.body.innerHTML = "Access Denied. Incorrect username or password.";
-    return;
-  }
-};
+const enteredUsername = prompt("Enter username:");
+const enteredPassword = prompt("Enter password:");
+
+if (enteredUsername !== username || enteredPassword !== password) {
+    document.body.innerHTML = "<h1>Access Denied</h1>";
+}
 

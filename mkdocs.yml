@@ -26,9 +26,6 @@ plugins:
     num_workers: 8
  - mermaid2:
  - print-site:
-extra:
-  username: "admin"
-  password: "secret"
 
 extra_javascript:
   - js/auth.js
