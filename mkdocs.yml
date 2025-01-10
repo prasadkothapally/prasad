@@ -25,5 +25,5 @@ plugins:
     num_workers: 8
  - mermaid2:
  - print-site:
-     
-
+plugins:
+    - auth-plugin

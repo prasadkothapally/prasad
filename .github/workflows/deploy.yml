@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           #pip install mkdocs mkdocs-material
-          pip install mkdocs mkdocs_puml mkdocs-kroki-plugin fontawesome-markdown mkdocs-material mkdocs-mermaid2-plugin mkdocs-swagger-ui mkdocs-print-site-plugin
+          pip install mkdocs mkdocs_puml mkdocs-kroki-plugin fontawesome-markdown mkdocs-material mkdocs-mermaid2-plugin mkdocs-swagger-ui mkdocs-print-site-plugin mkdocs-simple-auth
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
         env:
